@@ -1,47 +1,53 @@
-# QRIS Transaction Forecasting Using SARIMAX
+# QRIS Transaction Forecasting: A Business-Oriented Analytical Study
 
-## Overview
-This project focuses on forecasting the **volume and nominal value of QRIS transactions in Indonesia** using the **Seasonal ARIMA with Exogenous Variables (SARIMAX)** model. The analysis incorporates external explanatory variables and is complemented by a **survey-based validation** of cashless payment behavior among university students.
+## 1. Background and Context
+Quick Response Code Indonesian Standard (QRIS) has become a core component of Indonesia’s digital payment infrastructure, reflecting both transaction behavior and the pace of cashless payment adoption. Understanding historical transaction patterns and producing reliable forecasts are essential for supporting strategic planning, monitoring growth dynamics, and informing policy and business-related decision-making.
 
-The project is developed as part of an undergraduate thesis in Mathematics.
+Time series forecasting, when applied appropriately, enables analysts to identify underlying trends, seasonal structures, and forward-looking patterns that are relevant beyond short-term fluctuations. However, model selection must be aligned with data characteristics and analytical objectives rather than driven solely by methodological complexity.
 
-## Research Objective
-The primary objectives of this study are:
-- To model and forecast QRIS transaction volume and nominal value using SARIMAX.
-- To examine the role of exogenous variables in improving forecasting performance.
-- To validate forecasting results through survey data on student cashless payment behavior.
+## 2. Analytical Objectives
+This project aims to conduct a structured analysis of QRIS transaction data with the following objectives:
+- To examine trend and seasonal behavior in QRIS transaction volume and nominal value.
+- To evaluate the relevance of exogenous variables in explaining transaction dynamics.
+- To develop forecasting approaches that prioritize interpretability, stability, and business relevance.
+- To translate analytical results into insights that can support strategic and decision-oriented perspectives.
 
-## Data Description
-The analysis uses:
-- Monthly QRIS transaction data (volume and nominal value).
-- Exogenous variables related to QRIS adoption and merchant growth.
-- Survey data collected from university students to validate cashless behavior patterns.
+## 3. Data Overview
+The analysis utilizes monthly QRIS transaction data over a multi-year period, consisting of:
+- Transaction volume
+- Transaction nominal value
+- Exogenous variables related to merchant growth and digital payment adoption
 
-The time series data span multiple periods and are structured for forecasting analysis.
+In addition to time series data, survey-based validation was employed to contextualize forecasting results from a behavioral perspective, supporting interpretative alignment rather than methodological triangulation.
 
-## Methodology
-The analytical workflow includes:
-- Data preprocessing and transformation.
-- Stationarity testing and seasonal pattern identification.
-- SARIMAX model specification and estimation.
-- Model evaluation and comparison.
-- Interpretation of forecasting results.
-- Descriptive analysis of survey data for behavioral validation.
+## 4. Modeling Strategy and Rationale
+Given the distinct characteristics of the target variables, separate modeling strategies were applied to transaction volume and transaction nominal value.
 
-The study emphasizes the integration of quantitative forecasting results with behavioral insights.
+### 4.1 Transaction Volume
+For transaction volume, a deterministic trend regression model was selected as the final forecasting approach. This decision was based on the model’s ability to provide a stable representation of long-term movement while maintaining interpretability for strategic analysis.
 
-## Tools and Technologies
-- Python (pandas, numpy, matplotlib, statsmodels)
-- Google Colab
-- Microsoft Excel
-- Survey data collection and processing tools
+A SARIMAX model was implemented as a baseline analytical tool to examine the statistical relevance of exogenous variables. The purpose of this step was not to establish SARIMAX as the final forecasting model for transaction volume, but to assess whether external factors contribute meaningful explanatory information beyond trend-based dynamics.
 
-## Project Context
-This repository documents the full analytical process supporting the undergraduate thesis titled:
+### 4.2 Transaction Nominal Value
+For transaction nominal value, a SARIMAX model incorporating exogenous variables was employed as the final forecasting model. The nominal transaction series exhibits dynamic behavior that benefits from incorporating external influences, making SARIMAX an appropriate choice for capturing both autoregressive patterns and exogenous effects.
 
-**“Peramalan Volume dan Nominal Transaksi QRIS di Indonesia Menggunakan Model SARIMAX dengan Variabel Eksogen dan Validasi Survei Perilaku Cashless Mahasiswa.”**
+This differentiated modeling strategy reflects an analytical emphasis on model suitability rather than uniform methodological application.
 
-## Author
-**Sabrina Zada**  
-Mathematics Undergraduate  
-Universitas Negeri Semarang
+## 5. Evaluation and Interpretation
+Model evaluation was conducted using appropriate accuracy metrics and diagnostic assessments to ensure reliability and consistency. Beyond numerical performance, particular attention was given to interpretability and the alignment between model outputs and analytical objectives.
+
+Forecasting results were interpreted in relation to observed trends, seasonal behavior, and potential implications for strategic planning and monitoring of QRIS transaction activity.
+
+## 6. Key Insights and Implications
+The analysis indicates sustained growth and recurring seasonal patterns in QRIS transactions. Forecasting outcomes provide forward-looking perspectives that may support:
+- Monitoring transaction growth dynamics
+- Anticipating seasonal fluctuations
+- Informing planning and evaluation related to digital payment systems
+
+These insights are intended to support analytical understanding and decision-oriented interpretation rather than precise prediction of future values.
+
+## 7. Repository Structure
+The repository is organized to reflect a logical analytical workflow, guiding readers from data understanding through modeling and result interpretation. Folder naming and numbering are designed to support clarity and accessibility for both technical and non-technical audiences.
+
+## 8. Notes and Scope
+This project is derived from an academic study and has been reframed to emphasize its relevance for business analysis and strategic insight. While methodological rigor is maintained, the primary focus remains on analytical reasoning and interpretative value rather than exhaustive methodological comparison.
