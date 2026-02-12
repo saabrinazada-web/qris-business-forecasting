@@ -1,53 +1,64 @@
 # QRIS Transaction Forecasting: A Business-Oriented Analytical Study
 
-## 1. Background and Context
-Quick Response Code Indonesian Standard (QRIS) has become a core component of Indonesia’s digital payment infrastructure, reflecting both transaction behavior and the pace of cashless payment adoption. Understanding historical transaction patterns and producing reliable forecasts are essential for supporting strategic planning, monitoring growth dynamics, and informing policy and business-related decision-making.
+**Academic Thesis Title (English Version):**  
+Forecasting QRIS Transaction Volume and Nominal Value in Indonesia Using Deterministic Trend and SARIMAX Models with Exogenous Variables and Cashless Behavior Survey Validation
 
-Time series forecasting, when applied appropriately, enables analysts to identify underlying trends, seasonal structures, and forward-looking patterns that are relevant beyond short-term fluctuations. However, model selection must be aligned with data characteristics and analytical objectives rather than driven solely by methodological complexity.
+---
 
-## 2. Analytical Objectives
-This project aims to conduct a structured analysis of QRIS transaction data with the following objectives:
-- To examine trend and seasonal behavior in QRIS transaction volume and nominal value.
-- To evaluate the relevance of exogenous variables in explaining transaction dynamics.
-- To develop forecasting approaches that prioritize interpretability, stability, and business relevance.
-- To translate analytical results into insights that can support strategic and decision-oriented perspectives.
+## 1. Background and Business Context
 
-## 3. Data Overview
-The analysis utilizes monthly QRIS transaction data over a multi-year period, consisting of:
-- Transaction volume
-- Transaction nominal value
-- Exogenous variables related to merchant growth and digital payment adoption
+Quick Response Code Indonesian Standard (QRIS) has become a key component of Indonesia’s digital payment ecosystem, reflecting structural changes in transaction behavior and accelerating cashless adoption. As QRIS usage expands across consumer segments and merchant categories, understanding historical transaction dynamics and anticipating future trends becomes increasingly important for strategic planning, policy evaluation, and business decision-making.
 
-In addition to time series data, survey-based validation was employed to contextualize forecasting results from a behavioral perspective, supporting interpretative alignment rather than methodological triangulation.
+From a business analytics perspective, transaction volume and nominal transaction value capture different dimensions of ecosystem growth. Transaction volume primarily reflects adoption intensity and usage frequency, while nominal transaction value is more sensitive to economic conditions, merchant behavior, and payment infrastructure development. Distinguishing these dynamics is essential to produce forecasts that are not only statistically sound but also decision-relevant.
 
-## 4. Modeling Strategy and Rationale
-Given the distinct characteristics of the target variables, separate modeling strategies were applied to transaction volume and transaction nominal value.
+---
 
-### 4.1 Transaction Volume
-For transaction volume, a deterministic trend regression model was selected as the final forecasting approach. This decision was based on the model’s ability to provide a stable representation of long-term movement while maintaining interpretability for strategic analysis.
+## 2. Analytical Objective
 
-A SARIMAX model was implemented as a baseline analytical tool to examine the statistical relevance of exogenous variables. The purpose of this step was not to establish SARIMAX as the final forecasting model for transaction volume, but to assess whether external factors contribute meaningful explanatory information beyond trend-based dynamics.
+This project aims to support data-driven decision-making by analyzing historical QRIS transaction patterns and producing interpretable forecasts for both transaction volume and nominal transaction value. The analysis prioritizes methodological clarity, interpretability, and business relevance rather than model complexity alone.
 
-### 4.2 Transaction Nominal Value
-For transaction nominal value, a SARIMAX model incorporating exogenous variables was employed as the final forecasting model. The nominal transaction series exhibits dynamic behavior that benefits from incorporating external influences, making SARIMAX an appropriate choice for capturing both autoregressive patterns and exogenous effects.
+Specifically, the study evaluates appropriate modeling strategies for different transaction dimensions and assesses the role of exogenous variables in explaining transaction dynamics.
 
-This differentiated modeling strategy reflects an analytical emphasis on model suitability rather than uniform methodological application.
+---
 
-## 5. Evaluation and Interpretation
-Model evaluation was conducted using appropriate accuracy metrics and diagnostic assessments to ensure reliability and consistency. Beyond numerical performance, particular attention was given to interpretability and the alignment between model outputs and analytical objectives.
+## 3. Data Sources and Analytical Scope
 
-Forecasting results were interpreted in relation to observed trends, seasonal behavior, and potential implications for strategic planning and monitoring of QRIS transaction activity.
+This study utilizes both secondary and primary data to ensure analytical robustness and contextual validation.
 
-## 6. Key Insights and Implications
-The analysis indicates sustained growth and recurring seasonal patterns in QRIS transactions. Forecasting outcomes provide forward-looking perspectives that may support:
-- Monitoring transaction growth dynamics
-- Anticipating seasonal fluctuations
-- Informing planning and evaluation related to digital payment systems
+### 3.1 Secondary Data
+Secondary data were obtained from Bank Indonesia (BI) and consist of monthly time series observations spanning approximately 65 periods. The dataset includes QRIS transaction volume and nominal transaction value, along with exogenous indicators such as the number of QRIS merchants and MSME merchant growth. These variables capture structural adoption patterns and ecosystem-level dynamics within Indonesia’s digital payment system.
 
-These insights are intended to support analytical understanding and decision-oriented interpretation rather than precise prediction of future values.
+### 3.2 Primary Data
+Primary data were collected through a nationwide survey involving approximately 400 Indonesian university students. The survey focuses on cashless payment behavior and adoption tendencies. Rather than serving as direct model inputs, the survey data function as a validation instrument to contextualize and interpret the forecasting results from a behavioral perspective.
 
-## 7. Repository Structure
-The repository is organized to reflect a logical analytical workflow, guiding readers from data understanding through modeling and result interpretation. Folder naming and numbering are designed to support clarity and accessibility for both technical and non-technical audiences.
+---
 
-## 8. Notes and Scope
-This project is derived from an academic study and has been reframed to emphasize its relevance for business analysis and strategic insight. While methodological rigor is maintained, the primary focus remains on analytical reasoning and interpretative value rather than exhaustive methodological comparison.
+## 4. Methodological Framework
+
+Two complementary modeling approaches are employed to reflect the distinct characteristics of the outcome variables:
+
+- **Transaction Volume:** Modeled using a deterministic trend approach to capture long-term structural growth driven by adoption dynamics.
+- **Nominal Transaction Value:** Modeled using SARIMAX with exogenous variables to evaluate the contribution of external drivers and assess multivariate time series behavior.
+
+SARIMAX is positioned as a baseline analytical tool to test the statistical relevance of exogenous variables and inform methodological decisions, rather than being treated as the sole or final forecasting solution.
+
+---
+
+## 5. Key Insights and Business Relevance
+
+The analysis indicates that transaction volume exhibits a strong and persistent upward trend, suggesting that QRIS growth is primarily driven by systematic adoption rather than short-term volatility. In contrast, nominal transaction value demonstrates greater sensitivity to external factors, supporting the use of multivariate approaches for financial magnitude forecasting.
+
+From a business analytics standpoint, these findings support differentiated forecasting strategies: deterministic trend models are suitable for long-term volume planning, while SARIMAX-based approaches are more appropriate for evaluating policy scenarios, merchant expansion strategies, and ecosystem-level interventions affecting transaction value.
+
+---
+
+## 6. Project Structure
+- **README.md**: Business-oriented project overview and analytical framing  
+- **results_summary.md**: Executive-level summary of key findings and implications  
+- **analysis/**: Technical evidence, including the baseline SARIMAX notebook and analysis guide  
+
+---
+
+## Intended Audience
+
+This repository is designed for business analysts, policymakers, and decision-makers seeking clear, evidence-based insights into QRIS transaction dynamics, without requiring deep technical engagement with time series modeling code.
